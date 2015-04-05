@@ -1,0 +1,541 @@
+@import "bootstrap-compass";
+@import "bootstrap-variables";
+@import "bootstrap";
+
+
+/*********************************** my ************************************/
+.full-width {
+  /*margin-left: -32000px;
+  margin-right: -32000px;
+  padding-left: 32000px;
+  padding-right: 32000px;*/
+  margin-top:0;
+  margin-bottom:0;
+  padding-top: $line-height-computed * 2;
+  padding-bottom: $line-height-computed * 2;
+}
+
+/*********************** HTML ***********************/
+html, body {
+  //height: 100%;
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6  {
+  font-family: 'PT Sans Caption', sans-serif;
+  //text-align: center;
+  margin: (1.43em * 1.5) 0 (1.43em / 2) 0;
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+h1, h2, .h1, .h2 {
+  text-align: center;
+}
+h3, .h3 {
+  text-align: left;
+}
+/*h1, .h1 {
+  margin-top: floor(($font-size-h1 * $line-height-base) * 1.5) !important;
+  margin-bottom: floor(($font-size-h1 * $line-height-base) / 2) !important;
+}*/
+#header-cover-image .btn.btn-primary.btn-large {
+  font-size: 24px;
+  font-weight: 500;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 6px 20px;
+  line-height: 1.7em;
+  background: transparent;
+  border: 2px solid;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  text-transform: uppercase;
+  font-family: 'PT Sans Caption', sans-serif;
+  padding: 0.4em 2em;
+  border-color: #bbdefb;
+  color: #bbdefb;
+}
+#header-cover-image .btn.btn-primary.btn-large:hover {
+background: rgba( 255, 255, 255, 0.2 ); border: 2px solid transparent;
+}
+
+.btn.btn-primary {
+  background: transparent;
+  border: 2px solid;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  font-family: 'PT Sans Caption', sans-serif;
+  padding: 0.4em 2em;
+  border-color: #bbdefb;
+  color: #bbdefb;
+}
+.btn.btn-primary:hover {
+background: rgba( 255, 255, 255, 0.2 ); border: 2px solid transparent;
+}
+/*********************************** layout ************************************/
+#header-cover-image {
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/keyboard-561124.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+#header-cover {
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  display: table;
+  .header-cover-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    strong {
+      color: #81d4fa;
+    }
+    h1.cover-h1 {
+      font-size: 105px;
+      margin-top: 22px;
+margin-bottom: 11px;
+      color: #bbdefb;
+    }
+    h2.cover-h2 {
+      font-size: 48px;
+      margin-top: 22px;
+margin-bottom: 11px;
+    }
+    h3.cover-h3 {
+      text-align: center;
+      margin-top: 22px;
+margin-bottom: 11px;
+    }
+  }
+}
+#main-header {
+  //min-height: 100%;
+  //height: 100%;
+  width: 100%;
+}
+#main-content {
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+#main-footer {
+  height: 80px;
+  background-color: #212121;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: -80px;
+}
+
+.section-block {
+  margin-top: $line-height-computed * 2;
+  margin-bottom: $line-height-computed * 2;
+}
+
+/************************ skillbars ************************/
+#skill-bars {
+  margin: 0;
+  padding: 0;
+}
+.skillbar {
+
+  position:relative;
+  display:block;
+  margin-bottom:15px;
+  width:100%;
+  background:#eee;
+  height:30px;
+  /*border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;*/
+  -webkit-transition:0.4s linear;
+  -moz-transition:0.4s linear;
+  -ms-transition:0.4s linear;
+  -o-transition:0.4s linear;
+  transition:0.4s linear;
+  -webkit-transition-property:width, background-color;
+  -moz-transition-property:width, background-color;
+  -ms-transition-property:width, background-color;
+  -o-transition-property:width, background-color;
+  transition-property:width, background-color;
+}
+
+.skillbar-title {
+  position:absolute;
+  top:0;
+  left:10px;
+width:auto;
+height:30px;
+line-height: 30px;
+  font-weight:bold;
+  font-size:13px;
+  color:$gray-dark;
+  /*-webkit-border-top-left-radius:3px;
+  -webkit-border-bottom-left-radius:4px;
+  -moz-border-radius-topleft:3px;
+  -moz-border-radius-bottomleft:3px;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;*/
+}
+
+.skillbar-title span {
+  display:block;
+  background:rgba(0, 0, 0, 0.1);
+  padding:0 20px;
+  height:30px;
+  line-height:30px;
+  /*-webkit-border-top-left-radius:3px;
+  -webkit-border-bottom-left-radius:3px;
+  -moz-border-radius-topleft:3px;
+  -moz-border-radius-bottomleft:3px;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;*/
+}
+
+.skillbar-bar {
+  height:30px;
+  width:0px;
+  background:#90caf9;
+  /*border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;*/
+}
+
+.skill-bar-percent {
+  position:absolute;
+  right:10px;
+  top:0;
+  font-size:11px;
+  height:30px;
+  line-height:30px;
+  color:#ffffff;
+  color:rgba(0, 0, 0, 0.4);
+}
+
+
+.secondary-skills {
+  list-style: none;
+  margin:0;
+  padding:0;
+  li {
+    margin-bottom: 12px;
+  }
+}
+
+/************************ techs ************************/
+#techs {
+  @extend .full-width;
+  background-color: #bbdefb;
+  padding-top: $padding-large-vertical;
+  padding-bottom: $padding-large-vertical;
+  .h2 {
+    margin-top: 0;
+  }
+}
+#code {
+  @extend .full-width;
+  background-color: #4fc3f7;
+  padding-top: $padding-large-vertical;
+  padding-bottom: $padding-large-vertical;
+  .h2 {
+    margin-top: 0;
+  }
+  .workflow {
+    text-align: center;
+  }
+}
+
+//pic height 720px
+#parallax {
+  position: relative;
+  height: 600px;
+  max-width: 100%;
+  overflow: hidden;
+  
+  /*-webkit-transition: height 1s ease-out 0.5s;
+     -moz-transition: height 1s ease-out 0.5s;
+     -o-transition: height 1s ease-out 0.5s;
+     transition: height 1s ease-out 0.5s;*/
+}
+
+#parallax:hover {
+  height: 600px;
+}
+#scene {
+  height: 600px;
+  background: url(../img/parallax/parallax-bg.jpg) no-repeat 50% 0;
+  position: absolute;
+  width: 100%;
+  //background-attachment: fixed;
+  #layer1 {
+    background: url(../img/parallax/sphere1.png) no-repeat 0 0;
+    width: 84px;
+    height: 82px;
+    position: absolute;
+    top: 342px;
+    left: 380px;
+  }
+    #layer2 {
+    background: url(../img/parallax/sphere2.png) no-repeat 0 0;
+    width: 134px;
+    height: 134px;
+    position: absolute;
+    top: 377px;
+    left: 463px;
+  }
+    #layer3 {
+    background: url(../img/parallax/sphere3.png) no-repeat 0 0;
+    width: 89px;
+    height: 89px;
+    position: absolute;
+    top: 322px;
+    left: 703px;
+  }
+  #layer4 {
+    background: url(../img/parallax/sphere4.png) no-repeat 0 0;
+    width: 198px;
+    height: 194px;
+    position: absolute;
+    top: 226px;
+    left: 826px;
+  }
+  #layer5 {
+    background: url(../img/parallax/sphere5.png) no-repeat 0 0;
+    width: 211px;
+    height: 201px;
+    position: absolute;
+    top: 377px;
+    left: 1020px;
+  }
+}
+
+
+#allYouNeed {
+  color: #673ab7;
+}
+
+#contact {
+  .interested {
+    text-align: center;
+  }
+  .contact-form-block {
+    background-color: #2979ff;
+    padding-top: $padding-large-vertical;
+    padding-bottom: $padding-large-vertical;
+    h2 {
+      color: #fff;
+    }
+  }
+}
+#contact-form {
+  input[type=text], input[type=email], input[type=password] {
+    width: 100%;
+    @include box-sizing(border-box);
+    //height: 40px;
+    //padding: 0 20px;
+    //line-height: 40px;
+    border: none;
+  }
+  textarea {
+    width: 100%;
+    @include box-sizing(border-box);
+    border: none;
+    height: 120px;
+    color: #555555;
+  }
+  .btn-container {
+    text-align: center;
+    margin-top: 25px;
+  }
+}
+
+#pausing {
+    /*position:fixed;*/
+    top:0;
+    left:0;
+    width:100%;
+    /*height:100%;*/
+   position:relative;
+    background:transparent center no-repeat;
+    //background-size:cover;
+    //background-color: blue; 
+    overflow: hidden;
+    
+      background-image:url(../img/Orion_Nebula_-_Hubble_2006_mosaic_18000big.jpg);
+  background-attachment: fixed;
+}
+#stage1 {
+  height: 33%;
+  vertical-align: middle;
+  position: relative;
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+  }
+  h1 {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 100px;
+    margin: 0;
+  }
+}
+#stage2 {
+
+  height: 66.666%; 
+  position: absolute; 
+  top:0; 
+  left:0;
+  //overflow:hidden;
+
+}
+/*.box {
+    position:absolute;
+    left:0;
+    height:100%;
+    background:#09f;
+}*/
+
+
+
+@-moz-keyframes spinningH {
+  from {
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+  }
+  to{
+    -moz-transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@-webkit-keyframes spinningH {
+  from {
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+  }
+  to{
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@-o-keyframes spinningH {
+  from {
+    -o-transform: rotateX(0deg) rotateY(0deg);
+  }
+  to{
+    -o-transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@-ms-keyframes spinningH {
+  from {
+    -ms-transform: rotateX(0deg) rotateY(0deg);
+  }
+  to{
+    -ms-transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes spinningH {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to{
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+ #stage2 {
+   background-color: black;
+
+  //perspective-origin: center -5em;
+ }
+.cube-container {
+  width: 100%;
+  height: 100%;
+  //top: 0;
+  perspective: 1000px;
+  .container {
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+    h1 {
+      color: #fff;
+    }
+  }  
+}
+.animate {
+  -webkit-animation : spinningH 6s infinite linear;
+  -moz-animation    : spinningH 6s infinite linear;
+  -o-animation      : spinningH 6s infinite linear;
+  -ms-animation     : spinningH 6s infinite linear;
+  animation         : spinningH 6s infinite linear;
+}
+
+.side,
+.cube {
+  width: 20em;
+  height: 20em;
+}
+
+.cube {
+  //margin: 3em auto 0;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -10em;
+  margin-left: -10em;
+  //border: 2px dotted silver;
+ }
+
+.side {
+  position: absolute;
+  border: 1px solid orange;
+  opacity: .7;
+  }
+  
+.back {
+  transform: translateZ(-10em);
+  background: red;
+  }
+.front {
+  transform: translateZ(10em);
+  background: orange;
+  }
+    
+.left {
+  transform: translateX(-10em) rotateY(90deg);
+  background: yellow;
+  }
+.right {
+  transform: translateX(10em) rotateY(90deg);
+  background: green;
+  }
+.top {
+  transform: translateY(10em) rotateX(90deg);
+  background: blue;
+  }
+.bottom {
+  transform: translateY(-10em) rotateX(90deg);
+  background: purple;
+  }
