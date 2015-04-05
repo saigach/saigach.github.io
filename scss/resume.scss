@@ -15,6 +15,24 @@
   padding-bottom: $line-height-computed * 2;
 }
 
+
+@mixin BoxShadowHelper($level: 1) {
+    @if $level == 1 {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+    @if $level == 2 {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+    @if $level == 3 {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    @if $level == 4 {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    @if $level == 5 {
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+}
 /*********************** HTML ***********************/
 html, body {
   //height: 100%;
@@ -261,69 +279,6 @@ line-height: 30px;
   }
 }
 
-//pic height 720px
-#parallax {
-  position: relative;
-  height: 600px;
-  max-width: 100%;
-  overflow: hidden;
-  
-  /*-webkit-transition: height 1s ease-out 0.5s;
-     -moz-transition: height 1s ease-out 0.5s;
-     -o-transition: height 1s ease-out 0.5s;
-     transition: height 1s ease-out 0.5s;*/
-}
-
-#parallax:hover {
-  height: 600px;
-}
-#scene {
-  height: 600px;
-  background: url(../img/parallax/parallax-bg.jpg) no-repeat 50% 0;
-  position: absolute;
-  width: 100%;
-  //background-attachment: fixed;
-  #layer1 {
-    background: url(../img/parallax/sphere1.png) no-repeat 0 0;
-    width: 84px;
-    height: 82px;
-    position: absolute;
-    top: 342px;
-    left: 380px;
-  }
-    #layer2 {
-    background: url(../img/parallax/sphere2.png) no-repeat 0 0;
-    width: 134px;
-    height: 134px;
-    position: absolute;
-    top: 377px;
-    left: 463px;
-  }
-    #layer3 {
-    background: url(../img/parallax/sphere3.png) no-repeat 0 0;
-    width: 89px;
-    height: 89px;
-    position: absolute;
-    top: 322px;
-    left: 703px;
-  }
-  #layer4 {
-    background: url(../img/parallax/sphere4.png) no-repeat 0 0;
-    width: 198px;
-    height: 194px;
-    position: absolute;
-    top: 226px;
-    left: 826px;
-  }
-  #layer5 {
-    background: url(../img/parallax/sphere5.png) no-repeat 0 0;
-    width: 211px;
-    height: 201px;
-    position: absolute;
-    top: 377px;
-    left: 1020px;
-  }
-}
 
 
 #allYouNeed {
@@ -347,9 +302,9 @@ line-height: 30px;
   input[type=text], input[type=email], input[type=password] {
     width: 100%;
     @include box-sizing(border-box);
-    //height: 40px;
+    height: 40px;
     //padding: 0 20px;
-    //line-height: 40px;
+    line-height: 40px;
     border: none;
   }
   textarea {
@@ -363,8 +318,20 @@ line-height: 30px;
     text-align: center;
     margin-top: 25px;
   }
+  input[type=text], input[type=email], input[type=password], textarea {
+    transition: all 0.2s;
+    transition-timing-function: ease-in-out;
+    position: relative;
+    left: 0;
+    &:focus {
+      width: 106%;
+      left: -3%;
+      @include BoxShadowHelper(1);
+    }
+  }
 }
 
+/******************************** pausing **********************************/
 #pausing {
     /*position:fixed;*/
     top:0;
@@ -472,7 +439,7 @@ line-height: 30px;
 .cube-container {
   width: 100%;
   height: 100%;
-  //top: 0;
+  top: 0;
   perspective: 1000px;
   .container {
     margin-top: 100px;
@@ -539,3 +506,11 @@ line-height: 30px;
   transform: translateY(-10em) rotateX(90deg);
   background: purple;
   }
+  
+
+#stage3 {
+  height: 100%;
+  width: 100%;
+  top: 66.666%;
+  position: absolute; 
+}

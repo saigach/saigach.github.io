@@ -6959,68 +6959,6 @@ h3, .h3 {
   text-align: center;
 }
 
-#parallax {
-  position: relative;
-  height: 600px;
-  max-width: 100%;
-  overflow: hidden;
-  /*-webkit-transition: height 1s ease-out 0.5s;
-     -moz-transition: height 1s ease-out 0.5s;
-     -o-transition: height 1s ease-out 0.5s;
-     transition: height 1s ease-out 0.5s;*/
-}
-
-#parallax:hover {
-  height: 600px;
-}
-
-#scene {
-  height: 600px;
-  background: url(../img/parallax/parallax-bg.jpg) no-repeat 50% 0;
-  position: absolute;
-  width: 100%;
-}
-#scene #layer1 {
-  background: url(../img/parallax/sphere1.png) no-repeat 0 0;
-  width: 84px;
-  height: 82px;
-  position: absolute;
-  top: 342px;
-  left: 380px;
-}
-#scene #layer2 {
-  background: url(../img/parallax/sphere2.png) no-repeat 0 0;
-  width: 134px;
-  height: 134px;
-  position: absolute;
-  top: 377px;
-  left: 463px;
-}
-#scene #layer3 {
-  background: url(../img/parallax/sphere3.png) no-repeat 0 0;
-  width: 89px;
-  height: 89px;
-  position: absolute;
-  top: 322px;
-  left: 703px;
-}
-#scene #layer4 {
-  background: url(../img/parallax/sphere4.png) no-repeat 0 0;
-  width: 198px;
-  height: 194px;
-  position: absolute;
-  top: 226px;
-  left: 826px;
-}
-#scene #layer5 {
-  background: url(../img/parallax/sphere5.png) no-repeat 0 0;
-  width: 211px;
-  height: 201px;
-  position: absolute;
-  top: 377px;
-  left: 1020px;
-}
-
 #allYouNeed {
   color: #673ab7;
 }
@@ -7042,6 +6980,8 @@ h3, .h3 {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  height: 40px;
+  line-height: 40px;
   border: none;
 }
 #contact-form textarea {
@@ -7057,7 +6997,19 @@ h3, .h3 {
   text-align: center;
   margin-top: 25px;
 }
+#contact-form input[type=text], #contact-form input[type=email], #contact-form input[type=password], #contact-form textarea {
+  transition: all 0.2s;
+  transition-timing-function: ease-in-out;
+  position: relative;
+  left: 0;
+}
+#contact-form input[type=text]:focus, #contact-form input[type=email]:focus, #contact-form input[type=password]:focus, #contact-form textarea:focus {
+  width: 106%;
+  left: -3%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
 
+/******************************** pausing **********************************/
 #pausing {
   /*position:fixed;*/
   top: 0;
@@ -7163,6 +7115,7 @@ h3, .h3 {
 .cube-container {
   width: 100%;
   height: 100%;
+  top: 0;
   perspective: 1000px;
 }
 .cube-container .container {
@@ -7231,4 +7184,11 @@ h3, .h3 {
 .bottom {
   transform: translateY(-10em) rotateX(90deg);
   background: purple;
+}
+
+#stage3 {
+  height: 100%;
+  width: 100%;
+  top: 66.666%;
+  position: absolute;
 }

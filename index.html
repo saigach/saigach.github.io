@@ -228,6 +228,7 @@
 <!-- data-top="background-color:rgb(255,0,0);transform:rotate(-45deg);" data-bottom="background-color:rgb(255,0,255);transform:rotate(0deg);"
 	 data-top="position:fixed;" data-300p="position:relative;" -->
 	<div id="pausing" data-100p-top="background-position:50% 0px;" data--300p-top="background-position:50% -1000px;">
+		
 		<section id="stage1" data-50p-top="letter-spacing:100px; opacity: 0; transform: perspective(300px) rotateX(0deg) scale(1);" 
 		data-top="letter-spacing: 10px; opacity: 1; transform: perspective(300px) rotateX(0deg) scale(1);"
 		data--50p-top="transform: perspective(300px) rotateX(65deg) scale(0);opacity: 0;">
@@ -235,10 +236,10 @@
 		</section>
 		
 		
-		<div id="stage2" data-top="width:0%;" data--100p-top="width:100%">
+		<section id="stage2" data-top="width:0%;" data--100p-top="width:100%">
 				
-			  <div class="cube-container" data-0="position:static; left: -100%;" data-50p-top="position:fixed; left: -100%;" data--100p-top="position:fixed; left: 0; top:0;" data--200p-top="position:absolute; top: 75%;">
-				  <div class="container" data--100p-top="right: 0%; opacity: 1;" data--210p-top="right: -100%; opacity: 0;"><h1>and CSS3 tricks...</h1></div>
+			  <div class="cube-container" data-0="position:static; left: -100%;" data-50p-top="position:fixed; left: -100%;" data--100p-top="position:fixed; left: 0;" data--200p-top="position:absolute;">
+				  <div class="container" data--100p-top="right: 0%; opacity: 1;" data--190p-top="right: -100%; opacity: 0;"><h1>and CSS3 tricks...</h1></div>
 				  <div class="cube animate">
 				    <div class="back side"></div>
 				    <div class="left side"></div>
@@ -248,7 +249,23 @@
 				    <div class="front side"></div>
 				  </div>
 			  </div>
-		</div>
+		</section>
+		
+		<section id="stage3">
+				<div class="container"><h1>on responsive Bootstrap</h1></div>
+			  <div class="cube-container" data-0="display: none;" data-end="display: block;" >
+				  
+				  <div class="cube animate">
+				    <div class="back side"></div>
+				    <div class="left side"></div>
+				    <div class="right side"></div>
+				    <div class="top side"></div>
+				    <div class="bottom side"></div>
+				    <div class="front side"></div>
+				  </div>
+			  </div>
+		</section>
+		
 	</div>
 
 
@@ -298,13 +315,12 @@
 		</footer>
 		<script type="text/javascript" src="js/skrollr-master/dist/skrollr.min.js"></script>
 			<script type="text/javascript">
-			$(document).ready(function() {
-				
-				
-	var s = skrollr.init();
-	});
-	$("#pausing").height($(window).height()*3);
-	$("#main-header").height($(window).height());
+			$(document).ready(function() {											
+				var s = skrollr.init({
+				});
+			});
+			$("#pausing").height($(window).height()*3);
+			$("#main-header").height($(window).height());
 	</script>
 	</body>
 </html>
