@@ -7024,7 +7024,7 @@ h3, .h3 {
 }
 
 #stage1 {
-  height: 33%;
+  height: 33.33%;
   vertical-align: middle;
   position: relative;
 }
@@ -7050,6 +7050,13 @@ h3, .h3 {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+#stage3 {
+  height: 33.33%;
+  width: 100%;
+  top: 66.666%;
+  position: absolute;
 }
 
 /*.box {
@@ -7117,13 +7124,15 @@ h3, .h3 {
   height: 100%;
   top: 0;
   perspective: 1000px;
+  overflow: hidden;
 }
-.cube-container .container {
+
+#pausing .container {
   margin-top: 100px;
   position: relative;
   width: 100%;
 }
-.cube-container .container h1 {
+#pausing .container h1 {
   color: #fff;
 }
 
@@ -7184,11 +7193,4 @@ h3, .h3 {
 .bottom {
   transform: translateY(-10em) rotateX(90deg);
   background: purple;
-}
-
-#stage3 {
-  height: 100%;
-  width: 100%;
-  top: 66.666%;
-  position: absolute;
 }

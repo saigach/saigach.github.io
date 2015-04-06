@@ -348,7 +348,7 @@ line-height: 30px;
   background-attachment: fixed;
 }
 #stage1 {
-  height: 33%;
+  height: 33.33%;
   vertical-align: middle;
   position: relative;
   .container {
@@ -376,6 +376,12 @@ line-height: 30px;
   left:0;
   //overflow:hidden;
 
+}
+#stage3 {
+  height: 33.33%;
+  width: 100%;
+  top: 66.666%;
+  position: absolute; 
 }
 /*.box {
     position:absolute;
@@ -441,6 +447,11 @@ line-height: 30px;
   height: 100%;
   top: 0;
   perspective: 1000px;
+
+  overflow: hidden;
+}
+
+#pausing {
   .container {
     margin-top: 100px;
     position: relative;
@@ -448,8 +459,9 @@ line-height: 30px;
     h1 {
       color: #fff;
     }
-  }  
+  }
 }
+
 .animate {
   -webkit-animation : spinningH 6s infinite linear;
   -moz-animation    : spinningH 6s infinite linear;
@@ -508,9 +520,3 @@ line-height: 30px;
   }
   
 
-#stage3 {
-  height: 100%;
-  width: 100%;
-  top: 66.666%;
-  position: absolute; 
-}
