@@ -381,14 +381,22 @@ line-height: 30px;
   height: 33.33%;
   width: 100%;
   top: 66.666%;
-  position: absolute; 
+  position: absolute;
+  
+  .responsive-icon-container {
+    text-align: center;
+    margin-top: 8%;
+    .expand-link-container {
+      display: block;
+      @extend h2;
+      margin-top: 30px;
+      a {
+        color: $navbar-default-bg;
+        outline: none;
+      }
+    }
+  }
 }
-/*.box {
-    position:absolute;
-    left:0;
-    height:100%;
-    background:#09f;
-}*/
 
 
 
