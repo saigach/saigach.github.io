@@ -6740,6 +6740,11 @@ h3, .h3 {
   margin-top: floor(($font-size-h1 * $line-height-base) * 1.5) !important;
   margin-bottom: floor(($font-size-h1 * $line-height-base) / 2) !important;
 }*/
+#wrapper {
+  height: 100%;
+  min-height: 100%;
+}
+
 #header-cover-image .btn.btn-primary.btn-large {
   font-size: 24px;
   font-weight: 500;
@@ -6849,7 +6854,6 @@ h3, .h3 {
   position: relative;
   bottom: 0;
   width: 100%;
-  margin-top: -80px;
 }
 
 .section-block {
