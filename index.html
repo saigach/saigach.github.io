@@ -50,23 +50,18 @@
 					return false;
 				});
 
-				//$('#wrapper').css({opacity: 0});
+				
 			});
 			
-			$('#wrapper').load(function() {
-    			//if (window.localStorage && !localStorage['faded']) {
-			        //localStorage['faded'] = true;
-			        $('body').animate({opacity: 1}, 1000);
-			    //}
-			});
+
 
 
 		</script>
 	</head>
 
 	<body style="overflow: hidden; background-color: #000;">
-<iframe data-clicks="false" id="wrapper" src="index-if.html" style="opacity:0; position: relative; z-index: 2; width: 100%; height: 100%; border: 0; margin: 0 auto; display:block;"></iframe>
+<iframe data-clicks="false" id="wrapper" src="index-if.html" style="position: relative; z-index: 2; width: 100%; height: 100%; border: 0; margin: 0 auto; display:block;"></iframe>
 		
-<a href="#" class="expand" style="position: fixed; top:0; width: 100%; height: 100%; z-index: 1; background-color: #ccc" title="Expand back"></a>
+<a href="#" class="expand" style="position: fixed; top:0; width: 100%; height: 100%; z-index: 1; background-color: #fff" title="Expand back"></a>
 	</body>
 </html>
