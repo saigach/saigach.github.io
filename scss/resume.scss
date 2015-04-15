@@ -56,6 +56,22 @@ h3, .h3 {
   margin-top: floor(($font-size-h1 * $line-height-base) * 1.5) !important;
   margin-bottom: floor(($font-size-h1 * $line-height-base) / 2) !important;
 }*/
+
+#loader {
+color: #673ab7;
+
+    font-size: 400%;
+    height: 100%;
+
+    margin-top: -1em;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+
+    width: 100%;
+    z-index: 5;
+}
+
 #wrapper {
   height: 100%;
   min-height: 100%;

@@ -305,9 +305,11 @@
 				var s = skrollr.init({
 				});
 				
+				var iframe = parent.document.getElementById('wrapper');
+				$iframe = $(iframe);
+				
 				$('.squeeze').on('click', function() {
-					var iframe = parent.document.getElementById('wrapper');
-					$iframe = $(iframe);
+
 					//var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
 					$stage3 = $('#stage3');
 					var clicks = $iframe.data('clicks');
@@ -339,14 +341,11 @@
 				
 
 				
-							$(window).load(function() {
-    			//if (window.localStorage && !localStorage['faded']) {
-			        //localStorage['faded'] = true;
-			        var iframe = parent.document.getElementById('wrapper');
-					$iframe = $(iframe);
+				$(window).load(function() {
 			        $iframe.animate({opacity: 1}, 1000);
-			    //}
-			});
+			        $(parent.document.getElementById('loader')).fadeOut(200);
+				});
+				
 			});
 			$("#pausing").height($(window).height()*3);
 			$("#main-header").height($(window).height());
