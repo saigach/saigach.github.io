@@ -6740,16 +6740,64 @@ h3, .h3 {
   margin-top: floor(($font-size-h1 * $line-height-base) * 1.5) !important;
   margin-bottom: floor(($font-size-h1 * $line-height-base) / 2) !important;
 }*/
+/******************* iframe ************************/
+/*#loader {
+color: #673ab7;
+
+    font-size: 400%;
+    height: 100%;
+
+    margin-top: -1em;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+
+    width: 100%;
+    z-index: 5;
+}*/
 #loader {
-  color: #673ab7;
-  font-size: 400%;
-  height: 100%;
-  margin-top: -1em;
-  position: fixed;
-  text-align: center;
-  top: 50%;
-  width: 100%;
   z-index: 5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -30px;
+  margin-left: -30px;
+  width: 60px;
+  height: 60px;
+  background-color: #673ab7;
+  -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+  animation: rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes rotateplane {
+  0% {
+    -webkit-transform: perspective(120px);
+  }
+
+  50% {
+    -webkit-transform: perspective(120px) rotateY(180deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
+  }
+}
+
+@keyframes rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
 }
 
 #wrapper {
@@ -6757,6 +6805,7 @@ h3, .h3 {
   min-height: 100%;
 }
 
+/**************** /iframe ************************/
 #header-cover-image .btn.btn-primary.btn-large {
   font-size: 24px;
   font-weight: 500;
