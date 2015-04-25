@@ -33,6 +33,7 @@
 		<script type="text/javascript" src="js/scripts.js"></script>
 
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Sans+Caption' rel='stylesheet' type='text/css'>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
 
 	<body>
@@ -275,8 +276,8 @@
 								<p><input type="text" class="form-control" placeholder="name"></input></p>
 								<p><input type="email" class="form-control" placeholder="email"></input></p>  
 								<p><textarea placeholder="Task description" class="form-control" ></textarea></p>
-								<p><input type="file" placeholder="file (if needed)"></input></p>  
-								<p class="btn-container"><input type="submit" class="btn btn-primary" value="Hire me"/></p>
+								<div class="g-recaptcha" data-sitekey="6Lfi5gUTAAAAAAKKiMtkEQXVDUuTYRXBaE4OpvJP"></div>
+								<p class="btn-container"><input type="submit" class="btn btn-primary" id="hire-btn" value="Hire me"/></p>
 							</form>
 						</div>
 					</div>
@@ -350,10 +351,47 @@
 			$("#pausing").height($(window).height()*3);
 			$("#main-header").height($(window).height());
 			
-			
-
 
 	</script>
-	</div>
+	<script>
+	$('#hire-btn').on('click', function() {
+		
+		$.ajax({
+		  type: "POST",
+		  url: "https://www.google.com/recaptcha/api/siteverify",
+		  data: {
+		    'secret': '6Lfi5gUTAAAAAAZNan3pfoicFlUJaFg5KeBwP7Ct',
+		    'response': $("#g-recaptcha-response").val()
+		  }
+		 }).done(function(response) {
+		   console.log(response); // if you're into that sorta thing
+		 });
+		
+		/*$.ajax({
+		  type: "POST",
+		  url: "https://mandrillapp.com/api/1.0/messages/send.json",
+		  data: {
+		    'key': '-br4wL6y1J4r1vmnOtfcrg',
+		    'message': {
+		      'from_email': 'me@yuliaf.com',
+		      'to': [
+		          {
+		            'email': 'saigach@gmail.com',
+		            'name': 'Yulia Fedyakina',
+		            'type': 'to'
+		          }
+		        ],
+		      'autotext': 'true',
+		      'subject': 'Message from yuliaf.com',
+		      'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!'
+		    }
+		  }
+		 }).done(function(response) {
+		   console.log(response); // if you're into that sorta thing
+		 });*/
+		 
+		});
+	</script>
+	
 	</body>
 </html>
